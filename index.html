@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Country Explorer</h1>
+        <input type="text" id="search" placeholder="Search for a country...">
+        <select id="language-filter">
+            <option value="">All Languages</option>
+        </select>
+        <select id="region-filter">
+            <option value="">All Regions</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+        <a href="#" id="favorites-link">View Favorites</a>
+    </header>
+    
+    <div id="countries-container"></div>
+
+    <div id="country-details" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="country-name"></h2>
+            <img id="country-flag" src="" alt="Country Flag">
+            <p><strong>Capital:</strong> <span id="capital"></span></p>
+            <p><strong>Region:</strong> <span id="region"></span></p>
+            <p><strong>Population:</strong> <span id="population"></span></p>
+            <p><strong>Area:</strong> <span id="area"></span></p>
+            <p><strong>Languages:</strong> <span id="languages"></span></p>
+        </div>
+    </div>
+
+    <div id="favorites-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-favorites" class="close-button">&times;</span>
+            <h2>Your Favorites</h2>
+            <ul id="favorites-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

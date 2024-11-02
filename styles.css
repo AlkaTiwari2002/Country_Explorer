@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightseagreen;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  height: 200px;
+}
+
+h1 {
+  margin: 10px;
+  font-size: 2.5rem; 
+}
+
+input, select {
+  margin: 14px;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+#favorites-link {
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: #fff;
+  color: black;
+  margin: 14px;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+#countries-container {
+  background-color: rgb(208, 209, 209);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.country-card {
+  background: rgb(164, 216, 248);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.country-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.country-card button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.country-card button:hover {
+  background: #0056b3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.3rem;
+}
+
+.modal-content {
+  background-color: lightcyan;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#country-flag{
+  width: 100%;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#favorites-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#favorites-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input, select, #favorites-link {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input, select, #favorites-link {
+    width: 100%;
+  }
+
+  .country-card {
+    font-size: 1rem;
+  }
+}
